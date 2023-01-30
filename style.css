@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&family=Sofia+Sans:wght@400;700&display=swap');
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Sofia Sans', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* size walba inu soo dhaafin cabirkiiza */
+}
+:root{
+    --primar-color:#f78f70;
+    --seconday-color:#f6BACD;
+    --info-color:rgb(255, 232, 202);
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Sofia Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 100%;
+    max-width: 1140px;
+    /* meesha ugu badan uu tagi karo   */
+    margin: 0 auto;
+    /* top and bottom then center it  */
+}
+.d-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header{
+    position: relative;
+    height: 83px;
+    width: 100%;
+}
+nav{
+    height: 83px;
+    width: 100%;
+    padding: 20px 0px;
+
+}
+.brand{
+    color: #021300;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-family: 'Permanent Marker', cursive;
+} 
+.name{ 
+     color: rgb(93, 93, 255) 
+} 
+.navigation-bar ul{
+  
+    margin: 0px;
+    padding:0px;
+} 
+.navigation-bar ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0px 25px;
+
+} 
+.navigation-bar ul li:last-child{
+    margin-right: 0px;
+} 
+.navigation-bar ul li a{
+    color: #222222;
+    font-size: 16px;
+    font-weight: normal;
+    font-weight: 600px;
+    text-transform: capitalize;
+} 
+.navigation-bar ul li a:hover{
+    color: var(--primar-color);
+    border-bottom: 1px solid var(--seconday-color);
+} 
+ .btn{
+display: inline-block;
+padding: 10px 28px;
+color: #021300;
+background-color: var(--info-color) ;
+border-radius: 5px;
+font-weight: normal;
+font: 600;
+
+}
+
+ 
+
+.btn:hover{
+    background-color: var(--primar-color); 
+    
+  }
+.navigation-bar ul li a.btn:hover{
+    color:white;
+}
+.burger{
+   /* background-color: red; */
+    cursor: pointer;
+    width: 35px;
+    display: none;
+
+}
+.burger span{
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    width: 100%;
+    background-color:rgb(120, 120, 129);
+    margin-bottom: 3px;
+
+    color :#021300;
+    height: 4px;
+    margin-bottom: 3px; 
+    /* display: none; */
+}  
+
+    /* Cabirka shaashadaha waawayn sida laptop 
+    min waa greater 
+    max waa less then 
+     */
+
+@media(min-width:991px){
+    .navigation-bar{
+        display: block !important;
+    }
+}
+@media(max-width:991px){
+    .burger{
+        display: block;
+        position: absolute;
+        top:1;
+        right: 20px;
+    }
+    .container{
+        height: auto;
+    } 
+ 
+     .navigation-bar{
+        display:  none;
+        position: absolute;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        background-color: var(--info-color);
+        padding: 10px 0px;
+        text-align: center;
+        justify-content: center;
+        z-index: 2; 
+    } 
+    .navigation-bar ul li{
+        display: block;
+        margin: 13px;
+     
+    }
+    .navigation-bar ul li a.btn:hover{
+        background-color: var(--primar-color);
+        color: white;
+    }
+    .navigation-bar.active{
+        display: block;
+    }
+
+}  
+.home-content{
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 90vh;
+    max-width: 100%;
+}
+.home-content .content-left{
+    padding: 30px;
+}
+.home-content h1{
+    font-size: 50px;
+    margin-bottom:0px ;
+}
+.home-content p{
+    margin-bottom:20px ;
+   
+
+  
+}
+.home-content .content-left .btn{
+    margin-top: 10px;
+}
+.home-content .content-left .btn:hover{
+    background-color: var(--primar-color);
+    color: white; 
+}
+.home-content  img{
+    width: 500px;
+    height: 500px;
+}
+@media(max-width:767px){
+    .home-content{
+        /* display: flex; */
+ 
+       flex-direction: column-reverse;
+       /* align-content: space-around; */
+    
+        
+
+    }
+    .home-content img{
+        width: 300px;
+        height: 300px;
+    } 
+     .home-content .content-right{
+        position: absolute;
+        top: 15%;
+        /* background-color: red; */
+    }
+
+    .content-left{
+        position: relative;
+        top: 200px;
+    }
+
+}
